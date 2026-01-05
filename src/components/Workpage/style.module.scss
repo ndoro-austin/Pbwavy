@@ -1,0 +1,329 @@
+.workpageWrapper {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 4vw;
+  padding: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: "Bachelorette_PERSONAL_USE_ONLY";
+  src: url("/Bachelorette_PERSONAL_USE_ONLY.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bacheloretteFont {
+  font-family: "Bachelorette_PERSONAL_USE_ONLY", cursive;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+.headingWrapper {
+  text-align: left;
+  margin-top: 5rem;
+  padding-left: 10vw; // Updated padding for more spacing
+}
+
+.heading {
+  font-size: 5.5vw;
+  font-weight: 400;
+  color: #191a1b;
+  font-family: "Inter";
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.filterButtonsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 32px;
+  padding: 0 42px;
+  gap: 32px;
+}
+
+.filterButtonsLeft {
+  display: flex;
+  gap: 18px;
+  letter-spacing: -1px;
+  padding-left: 7vw;
+  font-family: "Inter";
+}
+
+.filterButtonsRight {
+  display: flex;
+  gap: 18px;
+  margin-left: auto;
+  padding-right: 7vw;
+}
+
+.filterButton {
+  min-width: 140px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid #9c9c9c;
+  background: #fff;
+  color: #191a1b;
+  font-size: 17px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.7s ease 0.2s;
+  padding: 0 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.filterButtonsLeft .filterButton {
+  min-width: 170px; // Optionally reduce min-width for smaller buttons
+  height: 64px; // Optionally reduce height for smaller buttons
+  border-radius: 42px;
+  padding: 0 16px;
+}
+.filterButtonsLeft .filterButton span,
+.filterButtonsLeft .filterButton p {
+  position: relative;
+  z-index: 3;
+}
+.filterButtonsLeft .filterButton:hover p {
+  color: #fff;
+}
+
+.filterButton.iconButton {
+  min-width: 68px;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0;
+  justify-content: center;
+}
+
+.filterButton.active,
+.activeIcon {
+  border: none;
+  background: #191a1b;
+  color: #fff;
+}
+
+.filterButton.extraMargin {
+  margin-right: 80px;
+}
+
+.countSup {
+  font-size: 10px;
+  margin-left: -2px;
+  font-weight: 300;
+  position: relative;
+  top: -6px;
+}
+
+// Custom icons for menu and grid
+.iconMenu {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: none;
+  position: relative;
+  z-index: 2;
+  transition: color 0.7s ease 0.2s;
+}
+.iconMenu::before,
+.iconMenu::after,
+.iconMenu span,
+.iconMenu .line2,
+.iconMenu .line4 {
+  content: "";
+  display: block;
+  height: 0.6px;
+  width: 18px;
+  background: currentColor;
+  position: absolute;
+  left: 2px;
+  z-index: 3;
+  transition: color 0.7s ease 0.2s;
+}
+
+.filterButton.iconButton:hover .iconMenu::before,
+.filterButton.iconButton:hover .iconMenu::after,
+.filterButton.iconButton:hover .iconMenu span,
+.filterButton.iconButton:hover .iconMenu .line2,
+.filterButton.iconButton:hover .iconMenu .line4 {
+  background: #fff;
+}
+
+.iconMenu::before {
+  top: 3px;
+}
+.iconMenu .line2 {
+  top: 6.5px;
+}
+.iconMenu span {
+  top: 10px;
+}
+.iconMenu .line4 {
+  top: 13.5px;
+}
+.iconMenu::after {
+  top: 17px;
+}
+.iconMenu {
+  position: relative;
+}
+.iconMenu span {
+  position: absolute;
+}
+
+.iconGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 4px;
+  width: 22px;
+  height: 22px;
+  z-index: 2;
+  transition: color 0.7s ease 0.2s;
+}
+.iconGrid span {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border: 1.5px solid #0f0f0fea; // Stroke only, not filled
+  background: transparent; // Ensure boxes are not filled
+  box-sizing: border-box;
+  border-radius: 2px;
+  z-index: 3;
+  transition: color 0.7s ease 0.2s;
+}
+
+.filterButton.iconButton:hover .iconGrid span {
+  border-color: #fff;
+}
+
+.filterButton.active .iconGrid span {
+  border-color: #fff;
+}
+.iconGrid .box1 {
+  grid-row: 1;
+  grid-column: 1;
+}
+.iconGrid .box2 {
+  grid-row: 1;
+  grid-column: 2;
+}
+.iconGrid .box3 {
+  grid-row: 2;
+  grid-column: 1;
+}
+.iconGrid .box4 {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.circleContainer {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 5;
+
+  .circle {
+    height: 1550%;
+    width: 120%;
+    left: -10%;
+    border-radius: 0 0 50% 50%;
+    background-color: white;
+    z-index: 2;
+    // Footer always behind
+    .footerBehind {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 0;
+    }
+    position: absolute;
+
+    box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+  }
+}
+
+// Responsive styles for mobile devices
+@media (max-width: 600px) {
+  .workpageWrapper {
+    padding: 8px;
+    padding-left: 2vw;
+    align-items: stretch;
+    margin-bottom: -40rem;
+  }
+  .headingWrapper {
+    margin-top: 2rem;
+    padding-left: 3vw;
+  }
+  .heading {
+    font-size: 8vw;
+    letter-spacing: -1px;
+    text-align: left;
+  }
+  .filterButtonsRow {
+    flex-direction: column;
+    gap: 18px;
+    padding: 0 0 20px 1px;
+    width: 100%;
+    height: 120%;
+    align-items: flex-start;
+    margin-left: -20px;
+  }
+  .filterButtonsLeft .filterButton {
+    min-width: 60px;
+    height: 20px;
+    padding: 24px 20px;
+    border-radius: 20px;
+    font-size: 17px; // Keep text size unchanged
+    margin-bottom: 8px;
+    
+  }
+
+  .filterButtonsRight {
+    display: none;
+  }
+
+  .iconMenu {
+    width: 18px;
+    height: 18px;
+  }
+  .iconMenu::before,
+  .iconMenu::after,
+  .iconMenu span,
+  .iconMenu .line2,
+  .iconMenu .line4 {
+    width: 14px;
+    left: 2px;
+  }
+  .iconGrid {
+    width: 18px;
+    height: 18px;
+    gap: 2px;
+  }
+  .iconGrid span {
+    width: 7px;
+    height: 7px;
+    border-width: 1px;
+  }
+  .circleContainer .circle {
+    height: 10%;
+    width: 150%;
+    left: 0;
+  }
+}

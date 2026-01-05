@@ -1,0 +1,280 @@
+.mobilePageBg {
+  background: #232323;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.successMessage,
+.errorMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1rem;
+  min-width: 280px;
+  max-width: 90vw;
+  z-index: 9999;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: popInOut 4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.successMessage {
+  background: #03ab24;
+  color: #fff;
+  border: 2px solid #03ab24;
+}
+
+.errorMessage {
+  background: #9b0000;
+  color: #fff;
+  border: 2px solid #9b0000;
+}
+
+@keyframes popInOut {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.mobileContactContainer {
+  width: 100vw;
+  max-width: 100vw;
+  padding: 1.5em 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileHeaderRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  padding-left: 0;
+}
+
+.profileImg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.titleText {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.headerTextBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headerTopRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projectTogetherText {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: -0.5rem;
+  margin-left: 0.5rem;
+}
+
+.mobileDetailsSection {
+  width: 100%;
+  padding: 1.2rem 0 0.8rem 0;
+  border-bottom: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.detailsBlock {
+  flex: 1 1 48%; /* Allows two blocks per row, with a little space for gap */
+  margin-bottom: 1rem; /* Add some bottom margin for wrapping */
+}
+.detailsTitle {
+  font-size: 0.7rem;
+  color: #aaa;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+.detailsText {
+  font-size: 0.9rem;
+  color: #fff;
+}
+.socialLink {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.mobileDivider {
+  border-top: 1px solid #333;
+  margin: 2rem 0 1rem 0;
+}
+
+.mobileFormSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+// ...existing code...
+.formItem {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1.2rem 0 0.8rem 0;
+  border-bottom: 1px solid #333;
+}
+.formNumber {
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1rem;
+  color: #888;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.formItem label {
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  margin-left: 2.2rem;
+}
+.formItem input,
+.formItem textarea {
+  background: transparent;
+  color: #bdbdbd;
+
+  border-radius: 0;
+  padding: 0.2em 0 0.7em 2.2rem;
+  font-size: 1.08em;
+  margin-bottom: 0.2em;
+  font-family: inherit;
+  box-shadow: none;
+}
+.formItem input:focus,
+.formItem textarea:focus {
+  outline: none;
+  color: #fff;
+}
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem 0 0.5rem 0;
+  position: relative;
+}
+.button {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 4px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15em;
+  background: #334bd3;
+  color: #fff;
+  box-shadow: 0 2px 16px rgba(51, 75, 211, 0.15);
+  z-index: 100;
+  position: relative;
+  padding: 0.5rem 6.5rem;
+  p {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    z-index: 101;
+    position: relative;
+  }
+}
+
+.bottomDivide {
+  padding: 1.2rem 0 0.8rem 0;
+  border-bottom: 1px solid #ffffff;
+}
+
+.bottomDivider {
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.socialsRow {
+  display: flex;
+  gap: 2rem;
+
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+}
+.socialsLabel {
+  color: #bdbdbd;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+.mobileInfoSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1.08em;
+  color: #fff;
+  gap: 8rem;
+}
+.mobileInfoSection > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.infoLabel {
+  color: #bdbdbd;
+  font-size: 0.7em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+}
+
+.infoValue {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .mobilePageBg {
+    display: none;
+  }
+}

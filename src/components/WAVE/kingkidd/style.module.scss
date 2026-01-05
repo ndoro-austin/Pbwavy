@@ -1,0 +1,627 @@
+// Style for the number span on All work button
+.countSup {
+  font-size: 10px;
+  margin-left: -1px;
+  font-weight: 300;
+  position: relative;
+  top: -6px;
+}
+// Rectangle under the image
+.fullWidthRectangle {
+  width: 100vw;
+  height: auto;
+  background: #222222;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 80px 0 0 0;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+.container {
+  padding: 2rem 1.5rem 2.5rem 6rem;
+  max-width: 1200px;
+  margin: -1.5rem auto 0 auto;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background: #fff;
+}
+
+.header {
+  font-size: 5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  letter-spacing: -0.04em;
+  align-self: flex-start;
+  text-align: left;
+  margin-left: 2.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.detailsRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -1.5rem;
+  gap: 7rem;
+  flex-wrap: wrap;
+  margin-right: 120px;
+}
+
+.detail {
+  flex: 1 1 0;
+  min-width: 220px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: -0.04em;
+  font-family: "Inter";
+}
+
+.detailLabel {
+  color: #b0b0b0;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1.5px solid #e0e0e0;
+  padding-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.liveSiteButton {
+  display: flex;
+  background: #435cff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  margin: -120px 160px 0 auto;
+  text-decoration: none;
+  box-shadow: 0 4px 24px rgba(61, 90, 254, 0.12);
+  text-align: center;
+  transition: background 0.2s;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.circleContainer {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  margin-top: 10px;
+
+  .circle {
+    height: 850%;
+    width: 120%;
+    left: -10%;
+    border-radius: 0 0 50% 50%;
+    background-color: white;
+    z-index: 1;
+    position: absolute;
+
+    box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
+  }
+}
+
+.fullWidthRectangl {
+  width: 100vw;
+  height: auto;
+  background: #222222;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 80px 0 0 0;
+  overflow: visible;
+}
+
+// Next Case Section
+.nextCaseSection {
+  background: #141414;
+  color: #fff;
+  padding: 6rem 0 3rem 0;
+  width: 100vw;
+  margin: 0;
+  height: auto;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  z-index: 10;
+}
+
+.nextCaseLabel {
+  text-align: center;
+  font-size: 0.875rem;
+
+  text-transform: uppercase;
+  color: #a1a1a1;
+  margin-bottom: -1rem;
+  font-family: "Inter", sans-serif;
+}
+
+.nextCaseContent {
+  max-width: 800px;
+  margin: 0 auto;
+
+  border-bottom: 0.01px solid #fff;
+
+  &:hover .nextCaseTitle {
+    opacity: 0.5;
+    transition: opacity 0.4s ease;
+  }
+}
+
+.nextCaseTitle {
+  font-size: 6rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  font-family: "Inter", sans-serif;
+  transition: opacity 0.4s ease;
+}
+
+.nextCaseImageWrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      #333 50%,
+      transparent 100%
+    );
+  }
+}
+
+.nextCaseImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.allWorkButtonWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 4rem 0;
+}
+
+.allWorkButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 2.5rem;
+  border: 1px solid #333;
+  border-radius: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  font-family: "Inter", sans-serif;
+  background: transparent;
+
+  &:hover {
+    border-color: #555;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+.allWorkButton:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.footerLeft {
+  display: flex;
+  gap: 4rem;
+}
+
+.footerSection {
+  h3 {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 0.75rem 0;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin: 0;
+    font-weight: 300;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.footerRight {
+  h3 {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 0.75rem 0;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  gap: 2rem;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: white;
+      display: block;
+      margin-top: 2px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.2s linear;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    margin-top: 4rem;
+    min-height: auto;
+  }
+
+  .header {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .detailsRow {
+    flex-direction: column;
+    gap: 2rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .detail {
+    min-width: 100%;
+    font-size: 1rem;
+  }
+
+  .detailLabel {
+    font-size: 0.65rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .liveSiteButton {
+    width: 120px;
+    height: 120px;
+    font-size: 0.9rem;
+    margin: -50px 20px 0 auto;
+  }
+
+  .nextCaseSection {
+    padding: 3rem 0 0 0;
+    height: 400px;
+    min-height: auto;
+  }
+
+  .fullWidthRectangl {
+    height: auto;
+    min-height: auto;
+  }
+  .nextCaseTitle {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    padding: 0 1rem;
+  }
+
+  .nextCaseLabel {
+    font-size: 0.75rem;
+    padding: 0 1rem;
+    margin-bottom: 10px;
+  }
+
+  .nextCaseContent {
+    padding: 0 1rem;
+  }
+
+  .nextCaseImageWrapper {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .allWorkButtonWrapper {
+    margin: 3rem 0 4rem 0;
+  }
+
+  .allWorkButton {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+    gap: 3rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .footerLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .footerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+
+    h3 {
+      margin: 0;
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-left: auto;
+
+      p {
+        text-align: right;
+      }
+    }
+  }
+
+  .footerRight {
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1.5px solid #333;
+    margin-bottom: -1rem;
+
+    h3 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .socialLinks {
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .button {
+    padding: 1.1rem 0.8rem;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .countSup {
+    font-size: 9px;
+    top: -5px;
+  }
+
+  // Cover and laptop images responsive
+  .coverContainer {
+    margin-top: -1rem !important;
+    max-width: 100%;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    width: 30% !important;
+    top: 18% !important;
+    left: 10%;
+  }
+
+  .coverImage {
+    max-width: 100%;
+    margin-top: -1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .laptopImage {
+    max-width: 100%;
+    padding: 0rem 1rem 0 1rem;
+    margin-top: -3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  // Image grid responsive
+  .imageGrid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 0.5rem !important;
+    margin: 3rem 0.5rem !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .gridImage {
+    flex-shrink: 0 !important;
+    width: 30% !important;
+    min-width: 100px !important;
+    max-width: 130px !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  // Hide cursor effects on mobile
+  .cursor,
+  .cursorLabel {
+    display: none;
+  }
+}
+
+// Cursor following button styles
+.cursor,
+.cursorLabel {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #455ce9;
+  color: white;
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.cursorLabel {
+  background-color: transparent;
+  font-size: 13px;
+  z-index: 10000;
+}
+
+.button {
+  padding: 1.1rem 2.8rem;
+  border-radius: 40px;
+  border: 1px solid grey;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+
+  p {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    transition: color 0.7s ease 0.2s;
+  }
+
+  &:hover p {
+    color: white;
+  }
+}
+
+// Image Grid Styles
+.imageGrid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8rem;
+  margin: 5rem 0;
+  flex-wrap: wrap;
+}
+
+.gridImage {
+  width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+// Cover and Laptop Images
+.coverContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: -5rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoImage {
+  position: absolute;
+  top: 40%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 300px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.coverImage {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.laptopImage {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  padding-top: 6rem;
+}

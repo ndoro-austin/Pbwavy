@@ -1,0 +1,22 @@
+.musicButton {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #1f1f1f;
+  background-color: #999999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease;
+  z-index: 10;
+}
+
+/* FLAT line */
+.flatShape {
+  width: 17px;
+  height: 1.5px;
+  background: white;
+  border-radius: 0.1px;
+}

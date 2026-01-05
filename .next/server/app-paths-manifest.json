@@ -1,0 +1,13 @@
+{
+  "/api/contact/route": "app/api/contact/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/page": "app/page.js",
+  "/wave/kingkidd/page": "app/wave/kingkidd/page.js",
+  "/wave/safaricom/page": "app/wave/safaricom/page.js",
+  "/wave/wizards/page": "app/wave/wizards/page.js",
+  "/wave/katana/page": "app/wave/katana/page.js",
+  "/work/page": "app/work/page.js"
+}

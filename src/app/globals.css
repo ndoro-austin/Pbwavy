@@ -1,0 +1,254 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/Inter/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "meoky";
+  src: url("/fonts/MEOKY.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* globals.css */
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Apply Inter as default */
+body {
+  font-family: var(--font-inter);
+}
+
+/* Page Transition Styles */
+.main {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.header a:hover {
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.header a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.header a:hover::after {
+  width: 100%;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  perspective: 1000px;
+}
+
+.home-page {
+  padding: 0;
+}
+
+.about-page,
+.contact-page,
+.work-page {
+  padding-top: 0;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins and paddings */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+}
+
+/* Prevent horizontal overflow from elements using 100vw or large negative margins */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Form elements styling */
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* Container for centering and max-width */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN: CONSISTENT COMPACT LAYOUT
+   ============================================ */
+
+/* Keep content centered and compact across all screen sizes */
+/* This prevents excessive white space on larger monitors */
+
+/* iPad & Tablet (768px - 1024px) */
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 16px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  .container {
+    max-width: 1200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+
+/* Laptop and above (1024px+) - Keep same proportions as laptop */
+@media screen and (min-width: 1024px) {
+  :root {
+    font-size: 16px;
+  }
+
+  body {
+    max-width: 100vw;
+  }
+
+  .container {
+    max-width: 1400px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .header {
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+
+  .header a {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop and Large Monitors (1440px+) - Maintain laptop proportions */
+@media screen and (min-width: 1440px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding: 1rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Center the entire page content */
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f0f0f0;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Extra Large Monitors (1920px+) - Lock proportions */
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .page {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .header {
+    max-width: 1400px;
+  }
+}

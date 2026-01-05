@@ -1,0 +1,136 @@
+.hero {
+  flex: 1;
+  margin-bottom: 3rem;
+}
+
+.name {
+  font-family: inter;
+  font-size: 8.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .name {
+    font-size: 4.2rem;
+  }
+  .copyright {
+    font-size: 1.6rem !important;
+  }
+  .infoRow {
+    gap: 1, 5rem !important;
+    flex-direction: column-reverse !important;
+  }
+  .bio {
+    margin-bottom: 8.2rem;
+    order: 2;
+  }
+  .cvButton {
+    order: 1;
+    transform: scale(1.1);
+  }
+}
+
+.copyright {
+  font-size: 4rem;
+  vertical-align: super;
+  margin-left: 0.2rem;
+  line-height: 1;
+}
+
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 0.1rem;
+  padding: 0;
+  flex-wrap: wrap; /* no stacking unless mobile forces it */
+}
+
+.cvButton {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 1.2rem 0.6rem 0.6rem;
+  font-family: inter;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: black;
+  background-color: #dfdfdf;
+  border: 2px solid black;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  z-index: 0;
+}
+
+.cvButton::before {
+  content: "";
+  position: absolute;
+  top: 10;
+  left: 9px;
+  width: 28px;
+  height: 60%;
+  background-color: #2d2d30;
+  z-index: 0;
+  transition: left 0.35s ease, width 0.35s ease, border-radius 0.35s ease 0.2s;
+  border-radius: 2rem;
+}
+
+.cvButton:hover::before {
+  top: 10;
+  left: 0;
+  width: 100%;
+  border-radius: 0rem;
+  transition: left 0.35s ease, width 0.35s ease, border-radius 0.35s ease 0.3s;
+}
+
+.cvButton:hover {
+  color: white;
+}
+
+.cvButton:hover .circle {
+  background: transparent;
+}
+
+.circle {
+  background-color: #2d2d30;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  transition: background 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.cvButton > span {
+  position: relative;
+  z-index: 1; /* keep text and icon above the fill */
+}
+
+.icon {
+  font-size: 0.8rem;
+}
+
+.icon {
+  font-size: 0.75rem;
+}
+
+.bio {
+  font-family: inter;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  max-width: 400px;
+  margin: 0;
+  text-align: left;
+}
+
+.cvButton {
+  transition: transform 0.4s ease-out;
+}

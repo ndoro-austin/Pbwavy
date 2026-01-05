@@ -1,0 +1,42 @@
+.grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  
+}
+
+/* Wrapper for main grid lines */
+.mainGrid {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-13.25%);
+}
+
+/* Wrapper for secondary grid lines */
+.secondaryGrid {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1; /* sits above main grid */
+
+  transform: translateX(-2.25%);
+}
+
+.gridLine {
+  width: 0.4px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.518);
+}
+
+.secondaryGridLine {
+  width: 0.1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.139);
+}

@@ -1,0 +1,34 @@
+.link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 12px; /* Reduced padding */
+  margin-left: 20px; /* Added left margin */
+  font-size: 48px;
+  margin-bottom: 18px; /* Add gap between links */
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    left: 190px;
+  }
+}
+
+/* Laptop breakpoint: reduce font size, padding, and margin */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .link {
+    font-size: 42px;
+    padding-left: -6px;
+    margin-left: -28px;
+     margin-top: -30px;
+    margin-bottom: 10px; /* Reduce gap for laptop */
+    .indicator {
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
