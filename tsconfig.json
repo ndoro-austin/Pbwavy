@@ -36,7 +36,7 @@
     "src/components/Homepage/description/index.jsx",
     "src/components/common/BackgroundMusic",
     ".next/dev/types/**/*.ts"
-  ],
+, "src/app/about/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]
