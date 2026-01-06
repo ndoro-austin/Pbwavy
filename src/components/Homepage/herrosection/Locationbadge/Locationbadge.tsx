@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import styles from "./LocationBadge.module.css";
+import styles from "./Locationbadge.module.css";
 
 export default function LocationBadge() {
   const [isMobile, setIsMobile] = useState(false);
