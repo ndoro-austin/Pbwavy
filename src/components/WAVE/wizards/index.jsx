@@ -339,7 +339,7 @@ export default function WizardsWave() {
         </div>
 
         <video
-          src="/images/wv.mp4"
+          src="/images/m1.mp4"
           alt="Laptop"
           data-scroll
           data-scroll-speed="2"

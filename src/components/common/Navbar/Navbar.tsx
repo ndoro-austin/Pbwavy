@@ -102,7 +102,7 @@ export default function Navbar() {
             >
               <ul className={styles.links}>
                 <Magnetic>
-                  <li 
+                  <li
                     className={pathname === "/" ? styles.active : ""}
                     onClick={() => router.push("/")}
                     style={{ cursor: "pointer" }}
@@ -126,7 +126,7 @@ export default function Navbar() {
                 </Magnetic>
                 <span>/</span>
                 <Magnetic>
-                  <li 
+                  <li
                     className={pathname === "/about" ? styles.active : ""}
                     onClick={() => router.push("/about")}
                     style={{ cursor: "pointer" }}
@@ -149,7 +149,7 @@ export default function Navbar() {
               style={{ display: "flex", alignItems: "center", gap: "16px" }}
             >
               <BackgroundMusic />
-              <RoundedButton 
+              <RoundedButton
                 className={styles.button}
                 onClick={() => router.push("/contact")}
                 style={{ cursor: "pointer" }}

@@ -106,7 +106,7 @@ export default function HeroSection() {
         animate="animate"
       >
         <motion.a
-          href="/cv.pdf"
+          href="/CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           ref={buttonRef}
