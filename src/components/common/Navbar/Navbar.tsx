@@ -102,11 +102,9 @@ export default function Navbar() {
               <ul className={styles.links}>
                 <Magnetic>
                   <li className={pathname === "/" ? styles.active : ""}>
-                    <Magnetic>
-                      <Link href="/" prefetch={true} rel="prefetch">
-                        HOME
-                      </Link>
-                    </Magnetic>
+                    <Link href="/" prefetch={true} rel="prefetch">
+                      HOME
+                    </Link>
                   </li>
                 </Magnetic>
                 <span>/</span>
@@ -118,21 +116,17 @@ export default function Navbar() {
                         : ""
                     }
                   >
-                    <Magnetic>
-                      <Link href="/work" prefetch={true} rel="prefetch">
-                        WORK
-                      </Link>
-                    </Magnetic>
+                    <Link href="/work" prefetch={true} rel="prefetch">
+                      WORK
+                    </Link>
                   </li>
                 </Magnetic>
                 <span>/</span>
                 <Magnetic>
                   <li className={pathname === "/about" ? styles.active : ""}>
-                    <Magnetic>
-                      <Link href="/about" prefetch={true} rel="prefetch">
-                        ABOUT
-                      </Link>
-                    </Magnetic>
+                    <Link href="/about" prefetch={true} rel="prefetch">
+                      ABOUT
+                    </Link>
                   </li>
                 </Magnetic>
               </ul>
@@ -151,21 +145,18 @@ export default function Navbar() {
             >
               <BackgroundMusic />
               <RoundedButton className={styles.button}>
-               
-                  <div className={styles.contact}>
-                    <Link
-                      href="/contact"
-                      className={styles.contactLink}
-                      prefetch={true}
-                      rel="prefetch"
-                    >
-                      <span>CONTACT</span>
+                <div className={styles.contact}>
+                  <Link
+                    href="/contact"
+                    className={styles.contactLink}
+                    prefetch={true}
+                    rel="prefetch"
+                  >
+                    <span>CONTACT</span>
 
-                      
-                        <FaArrowRight className={styles.icon} />
-                      
-                    </Link>
-                  </div>
+                    <FaArrowRight className={styles.icon} />
+                  </Link>
+                </div>
               </RoundedButton>
             </motion.div>
           )}
