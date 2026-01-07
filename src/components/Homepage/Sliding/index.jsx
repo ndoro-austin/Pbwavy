@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
 import styles from "./style.module.scss";
 import Image from "next/image";
+import { getMediaUrl } from "@/lib/cloudinary";
 
 const slider1 = [
   {
@@ -84,7 +85,7 @@ export default function index() {
                   style={{ objectFit: "cover" }}
                 />
               ) : (
-                <video src={project.src} autoPlay loop muted playsInline />
+                <video src={getMediaUrl(project.src)} autoPlay loop muted playsInline />
               )}
             </div>
           </div>
@@ -108,7 +109,7 @@ export default function index() {
                 />
               ) : (
                 <video
-                  src={project.src}
+                  src={getMediaUrl(project.src)}
                   autoPlay
                   loop
                   muted

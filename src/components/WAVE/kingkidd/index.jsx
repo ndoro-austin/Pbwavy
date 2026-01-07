@@ -7,6 +7,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Navbar from "../../common/Navbar/Navbar";
 import Rounded from "../../common/RoundedButton";
 import Magnetic from "../../common/Magnetic";
+import { getMediaUrl } from "@/lib/cloudinary";
 import styles from "./style.module.scss";
 import gsap from "gsap";
 
@@ -353,7 +354,7 @@ export default function WizardsWave() {
         </div>
 
         <video
-          src="/images/k3.mp4"
+          src={getMediaUrl("/images/k3.mp4")}
           autoPlay
           loop
           muted
@@ -367,7 +368,7 @@ export default function WizardsWave() {
         {/* Row of 3 images */}
         <div className={styles.imageGrid}>
           <video
-            src="/images/k4.mp4"
+            src={getMediaUrl("/images/k4.mp4")}
             autoPlay
             loop
             muted
@@ -378,7 +379,7 @@ export default function WizardsWave() {
             className={styles.gridImage}
           />
           <video
-            src="/images/k1.mp4"
+            src={getMediaUrl("/images/k1.mp4")}
             autoPlay
             loop
             muted
@@ -389,7 +390,7 @@ export default function WizardsWave() {
             className={styles.gridImage}
           />
           <video
-            src="/images/k2.mp4"
+            src={getMediaUrl("/images/k2.mp4")}
             autoPlay
             loop
             muted

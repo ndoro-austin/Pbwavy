@@ -127,7 +127,8 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2, ease: "easeOut" }}
         >
-          He helps brands to stand out in the digital era. Together they set the new status quo. No nonsense, always on the cutting edge.
+          He helps brands to stand out in the digital era. Together they set the
+          new status quo. No nonsense, always on the cutting edge.
         </motion.p>
       </motion.div>
     </section>

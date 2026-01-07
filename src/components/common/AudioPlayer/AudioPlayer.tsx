@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import { getMediaUrl } from "@/lib/cloudinary";
 
 interface AudioPlayerProps {
   isPlaying: boolean;
@@ -67,7 +68,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
   return (
     <audio ref={audioRef} loop preload="auto" crossOrigin="anonymous">
-      <source src="/music/Outro - M83.mp3" type="audio/mpeg" />
+      <source src={getMediaUrl("/music/Outro - M83.mp3")} type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
   );

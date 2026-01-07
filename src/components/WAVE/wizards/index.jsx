@@ -7,6 +7,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Navbar from "../../common/Navbar/Navbar";
 import Rounded from "../../common/RoundedButton";
 import Magnetic from "../../common/Magnetic";
+import { getMediaUrl } from "@/lib/cloudinary";
 import styles from "./style.module.scss";
 import gsap from "gsap";
 
@@ -339,7 +340,7 @@ export default function WizardsWave() {
         </div>
 
         <video
-          src="/images/m1.mp4"
+          src={getMediaUrl("/images/m1.mp4")}
           alt="Laptop"
           data-scroll
           data-scroll-speed="2"
