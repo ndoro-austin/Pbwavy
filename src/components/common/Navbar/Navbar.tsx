@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { FaArrowRight } from "react-icons/fa";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Magnetic from "../../common/Magnetic";
 import { useEffect, useState } from "react";
 import Header from "../Sidenavbar/Header";
@@ -13,6 +13,7 @@ import { useNavigation } from "../NavigationProvider";
 import BackgroundMusic from "../BackgroundMusic/BackgroundMusic";
 
 export default function Navbar() {
+  const router = useRouter();
   const { isPlaying, toggleMusic } = useNavigation();
   const scaleAnimation: Variants = {
     initial: { scale: 0, opacity: 0 },
@@ -101,10 +102,12 @@ export default function Navbar() {
             >
               <ul className={styles.links}>
                 <Magnetic>
-                  <li className={pathname === "/" ? styles.active : ""}>
-                    <Link href="/" prefetch={true} rel="prefetch">
-                      HOME
-                    </Link>
+                  <li 
+                    className={pathname === "/" ? styles.active : ""}
+                    onClick={() => router.push("/")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    HOME
                   </li>
                 </Magnetic>
                 <span>/</span>
@@ -115,18 +118,20 @@ export default function Navbar() {
                         ? styles.active
                         : ""
                     }
+                    onClick={() => router.push("/work")}
+                    style={{ cursor: "pointer" }}
                   >
-                    <Link href="/work" prefetch={true} rel="prefetch">
-                      WORK
-                    </Link>
+                    WORK
                   </li>
                 </Magnetic>
                 <span>/</span>
                 <Magnetic>
-                  <li className={pathname === "/about" ? styles.active : ""}>
-                    <Link href="/about" prefetch={true} rel="prefetch">
-                      ABOUT
-                    </Link>
+                  <li 
+                    className={pathname === "/about" ? styles.active : ""}
+                    onClick={() => router.push("/about")}
+                    style={{ cursor: "pointer" }}
+                  >
+                    ABOUT
                   </li>
                 </Magnetic>
               </ul>
@@ -144,18 +149,14 @@ export default function Navbar() {
               style={{ display: "flex", alignItems: "center", gap: "16px" }}
             >
               <BackgroundMusic />
-              <RoundedButton className={styles.button}>
+              <RoundedButton 
+                className={styles.button}
+                onClick={() => router.push("/contact")}
+                style={{ cursor: "pointer" }}
+              >
                 <div className={styles.contact}>
-                  <Link
-                    href="/contact"
-                    className={styles.contactLink}
-                    prefetch={true}
-                    rel="prefetch"
-                  >
-                    <span>CONTACT</span>
-
-                    <FaArrowRight className={styles.icon} />
-                  </Link>
+                  <span>CONTACT</span>
+                  <FaArrowRight className={styles.icon} />
                 </div>
               </RoundedButton>
             </motion.div>
